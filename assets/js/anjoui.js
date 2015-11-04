@@ -1,8 +1,10 @@
 $(document).ready(function() {
   $('#fullpage').fullpage({
-    anchors: ['home', 'how-it-works', 'why-anjoui', 'signup', 'about'],
+    anchors: ['home', 'what-is-anjoui', 'how-it-works', 'why-anjoui', 'sign-up', 'about-team'],
     menu: '#menu',
     autoScrolling: false,
+    fitToSectionDelay: 300,
+    css3: true,
     onLeave: function(index, nextIndex, direction) {
         var leavingSection = $(this);
 

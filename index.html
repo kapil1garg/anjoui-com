@@ -13,6 +13,7 @@
     <!-- Vendor styles -->
     <link rel="stylesheet" type="text/css" href="./assets/css/vendor/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/vendor/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/vendor/font-awesome-4.4.0/css/font-awesome.css" />
 
     <!-- Custom styles and font -->
     <link rel="stylesheet" type="text/css" href="./assets/css/anjoui.css" />
@@ -26,49 +27,98 @@
   </head>
 
   <body>
-      <nav id="header" class="transition navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="col-md-12">
-            <ul id="menu" class="nav navbar-nav">
-              <li data-menuanchor="how-it-works"><a href="#how-it-works">How it Works</a></li>
-              <li data-menuanchor="why-anjoui"><a href="#why-anjoui">Why Anjoui</a></li>
-              <li data-menuanchor="signup"><a href="#signup">Sign Up</a></li>
-              <li data-menuanchor="about"><a href="#about">About the Team</a></li>
-            </ul>
-          </div>
+    <nav id="header" class="transition navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="col-md-12">
+          <ul id="menu" class="nav navbar-nav">
+            <li data-menuanchor="what-is-anjoui">
+              <a href="#what-is-anjoui">What is Anjoui</a>
+            </li>
+            <li data-menuanchor="how-it-works">
+              <a href="#how-it-works">How it Works</a>
+            </li>
+            <li data-menuanchor="why-anjoui">
+              <a href="#why-anjoui">Why Anjoui</a>
+            </li>
+            <li data-menuanchor="sign-up">
+              <a href="#sign-up">Sign Up</a>
+            </li>
+            <li data-menuanchor="about-team">
+              <a href="#about-team">About the Team</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
     <div id="fullpage">
-      <div class="section" id="home">
+      <!-- Home Picture -->
+      <div class="section" id="home-page">
         <div id="cover">
           <h1>welcome to anjoui</h1>
           <h3>enjoy fresh, homemade food at affordable prices around you</h3>
         </div>
       </div>
 
-      <div class="section" id="how">
-        <div class="intro">
+      <!-- What is Anjoui -->
+      <div class="section" id="what-page">
+        <div class="col-md-12">
+          <h1>What is Anjoui?</h1>
+        </div>
+
+        <div class="cook col-md-6">
+          <h1>Cook</h1>
+          <p>
+            Have you ever wanted to share with the world your passion for food? Do you spend too much on groceries and want to split the cost? We at Anjoui provide a platform where you could sell your favorite dishes to recoup some of the cost of your groceries, while displaying your great cooking skills!
+          </p>
+        </div>
+
+        <div class="diner col-md-6">
+          <h1>Diner</h1>
+          <p>
+            Why have take-out food when you can have fresh home cook meals at extremely affordable prices? Anjoui makes sure you will always get fresh home cooked meals, while meeting cooks in your community and trying out different dishes!
+          </p>
+        </div>
+      </div>
+
+      <!-- How does Anjoui work? -->
+      <div class="section" id="how-page">
+        <div class="col-md-12">
           <h1>How does Anjoui work?</h1>
         </div>
+
+        <div class="cook col-md-6">
+          <h1>Cook</h1>
+          <ul id="cook">
+            <li>Lists dish</li>
+            <li>Inputs time ready for pickup/delivery and dish details</li>
+            <li>Confirms</li>
+          </ul>
+        </div>
+
+        <div class="diner col-md-6">
+          <h1>Diner</h1>
+          <ul id="diner">
+            <li>Lists dish</li>
+            <li>Inputs time ready for pickup/delivery and dish details</li>
+            <li>Confirms</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="section" id="why">
-        <div class="intro">
+      <!-- Why choose Anjoui? -->
+      <div class="section" id="why-page">
           <h1>Why Anjoui?</h1>
-        </div>
       </div>
 
-      <div class="section" id="signup">
-        <div class="intro">
+      <!-- Signup -->
+      <div class="section" id="sign-up-page">
           <h1>Signup</h1>
-        </div>
       </div>
 
-      <div class="section" id="about">
-        <div class="intro">
+      <!-- About the team -->
+      <div class="section" id="about-team-page">
           <h1>About the Team</h1>
-        </div>
       </div>
     </div>
   </body>
