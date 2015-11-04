@@ -163,10 +163,23 @@ p {
 
 #how-page {
   background-color: #09BFAF;
+  color: #FFFFFF;
 }
 
-#how-page h1 {
+#how-page h1{
   color: #FFFFFF;
+}
+
+
+.parent {
+  position: relative;
+  margin-top: 2%;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .content {
