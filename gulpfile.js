@@ -9,13 +9,26 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     jshint = require('gulp-jshint');
 
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////// DEVELOPMENT TASKS ////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 // Lint javascript code
-gulp.task('lint', function () {
-  gulp.src(['./assets/js/**/*.js',
-            '!./assets/js/vendor/*.js'])
+gulp.task('jshint', function () {
+  gulp.src(['./assets/js/**/*.js', '!./assets/js/vendor/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'));
 });
+
+gulp.task('watch', function () {
+  gulp.watch('./assets/js/**/*.js', ['jshint']);
+});
+
+gulp.task('default', ['watch']);
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// BUILD TASKS //////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 // Remove the dist directory
 gulp.task('clean', function (cb) {
@@ -80,9 +93,8 @@ gulp.task('size', function () {
     return gulp.src('dist/**').pipe(size());
 });
 
-// Run all tasks once copying is done.
-// Allows build system to be called using 'gulp' and will print final file size
-gulp.task('default',
+// Run all tasks to make dist build
+gulp.task('build',
         ['copy', 'js-vendor', 'js-non-vendor', 'css-vendor', 'css-non-vendor',
         'image-optimization'],
         function () {
